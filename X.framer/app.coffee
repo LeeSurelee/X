@@ -41,28 +41,30 @@ scroll.on Events.Move, (event) ->
 	yDelta = LastPosition - scroll.scrollY
 	LastPosition = scroll.scrollY
 # 	print yDelta
-	if yDelta < -1
-		stateup = 1
-	else if yDelta > 1
-		statedown = 1
-	else if yDelta < 0.8 or yDelta > -0.8
-		stateup = 0
-		statedown = 0
-	if stateup == 1
-		ScrollOverlayUp.animate
-			opacity: 1
-	if statedown == 1
-		ScrollOverlayDown.animate
-			opacity: 1
-	if stateup == 0
-		ScrollOverlayUp.animate
-			opacity: 0
-			animationOptions:
-				time: .1
-				curve: Bezier.easeIn
-	if statedown == 0
-		ScrollOverlayDown.animate
-			opacity: 0
-			animationOptions:
-				time: .1
-				curve: Bezier.easeIn
+	ScrollOverlayUp.opacity = Utils.modulate(yDelta,[-5,-1],[.8,0],true)
+	ScrollOverlayDown.opacity = Utils.modulate(yDelta,[1,5],[0,.8],true)
+# 	if yDelta < -1
+# 		stateup = 1
+# 	else if yDelta > 1
+# 		statedown = 1
+# 	else if yDelta < 0.8 or yDelta > -0.8
+# 		stateup = 0
+# 		statedown = 0
+# 	if stateup == 1
+# 		ScrollOverlayUp.animate
+# 			opacity: 1
+# 	if statedown == 1
+# 		ScrollOverlayDown.animate
+# 			opacity: 1
+# 	if stateup == 0
+# 		ScrollOverlayUp.animate
+# 			opacity: 0
+# 			animationOptions:
+# 				time: .1
+# 				curve: Bezier.easeIn
+# 	if statedown == 0
+# 		ScrollOverlayDown.animate
+# 			opacity: 0
+# 			animationOptions:
+# 				time: .1
+# 				curve: Bezier.easeIn
