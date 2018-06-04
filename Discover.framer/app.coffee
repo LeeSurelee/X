@@ -1,7 +1,6 @@
 flow = new FlowComponent
 flow.showNext(Discover)
 flow.header = NavigationBar_Found
-flow.footer = tabbar3
 
 Framer.Defaults.Animation =
 	time: 0.5
@@ -28,6 +27,8 @@ Cards.y = Card1Aggre.y + Card1Aggre.height + 20
 # 	flow.showNext(DiscoverMore)
 Push.parent = Discover
 tabbar3.parent = Discover
+tabbar3.y = Screen.height - tabbar3.height
+tabbar3.placeBehind(Push)
 Push.y = 622
 Push.states.a=
 	y: 552
