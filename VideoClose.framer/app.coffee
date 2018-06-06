@@ -3,7 +3,7 @@ Framer.Defaults.Animation =
 	curve: Spring(damping: .8)
 content.draggable.enabled = true
 content.draggable.horizontal = false
-
+content.image = Utils.randomImage()
 distance = 0
 content.on "change:y" ,->
 	distance = content.y - 297
