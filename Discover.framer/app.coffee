@@ -2,6 +2,7 @@ flow = new FlowComponent
 flow.showNext(Discover)
 flow.header = NavigationBar_Found
 
+	
 Framer.Defaults.Animation =
 	time: 0.5
 	curve: Spring(damping: .8)
