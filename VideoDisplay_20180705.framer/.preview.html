@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		
+		<meta name="format-detection" content="telephone=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<script type="text/javascript">
+		// This automatically sets the right viewport scale on mobile devices
+		(function() {
+ 		var scale = 1 / window.devicePixelRatio
+ 		var viewport = "width=device-width, height=device-height, initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no"
+ 		var iOS = /iPad|iPhone|iPod/.test(navigator.platform)
+ 		if (iOS) { viewport += ", shrink-to-fit=no" }
+ 		document.write("<meta name=\"viewport\" content=\"" + viewport + "\">")
+		})()
+		</script>
+
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png">
+		<link rel="apple-touch-icon" href="framer/images/icon-76.png" sizes="76x76">
+		<link rel="apple-touch-icon" href="framer/images/icon-120.png" sizes="120x120">
+		<link rel="apple-touch-icon" href="framer/images/icon-152.png" sizes="152x152">
+		<link rel="apple-touch-icon" href="framer/images/icon-180.png" sizes="180x180">
+		<link rel="apple-touch-icon" href="framer/images/icon-192.png" sizes="192x192">
+
+		<link rel="stylesheet" type="text/css" href="framer/style.css?nocache=6d40bc53861208d298f85019e08849ff">
+
+		<script src="framer/coffee-script.js"></script>
+		<script src="framer/framer.js?nocache=d2bbfa2efc034b8e02a947de8442af20"></script>
+		<script >;Framer.Defaults.DeviceComponent ={'deviceScale': -1, 'deviceType':'fullscreen', 'contentScale': 1};Framer.Device = new Framer.DeviceComponent();Framer.Device.setupContext();if (Framer.Device.prepareForSnapshot) { Framer.Device.prepareForSnapshot() }Framer.Screen.backgroundColor = 'black';print = function(){}//?nocache=8fbf28bde6ae6d5de95edd0a595bcfc5"></script>
+		<script src="framer/framer.modules.js?nocache=eccae70de72303085ae222e2e334aaed"></script>
+		<script src="framer/framer.vekter.js"></script>
+		<script>document.addEventListener("DOMContentLoaded", function() {window.__framerClientCodeId = 0;window.__framerNew = function (n,loc,th,i){if (i == null) { return i };i.__framerInstanceInfo = _.defaults({name:n,location:loc,hash:th},i.__framerInstanceInfo);_.defaults(i.__framerInstanceInfo,{name:"Untitled"});return i;};(function() {
+  var changepic, displayIma, h, imaw2, imaw25, ratio, slider1, slider1num, slider2, slider2num, w;
+
+  w = 1;
+
+  h = 1;
+
+  ratio = 0;
+
+  imaw2 = (Screen.width - 40) * 2 / 3;
+
+  imaw25 = (Screen.width - 40) * 5 / 6;
+
+  ima.image = Utils.randomImage();
+
+  ima.width = imaw2 * 1.1;
+
+  ima.height = imaw2 * 1.45;
+
+  slider1 = window.__framerNew("slider1", "10:14-13:0", "#158ae7522",new SliderComponent({
+    y: 600,
+    x: Align.center
+  }));
+
+  slider2 = window.__framerNew("slider2", "14:14-17:10", "#f833289e",new SliderComponent({
+    y: 600,
+    x: Align.center,
+    opacity: 0
+  }));
+
+  slider2.sendToBack();
+
+  h = 40;
+
+  displayIma = function() {
+    return wid1.template = {
+      w: Utils.round(ima.width),
+      h: Utils.round(ima.height)
+    };
+  };
+
+  changepic = function() {
+    ratio = w / h;
+    rate.template = {
+      r: Math.round(ratio * 1000) / 1000
+    };
+    betaValue.template = wid.template = {
+      w: Utils.round(ratio * 222),
+      h: Utils.round(222 / ratio)
+    };
+    gammaValue.template = ball.rotation = Utils.round(-alpha.rotation);
+    if (ratio >= 1 && ratio <= 16 / 9) {
+      ima.width = (9 / 28 * ratio + 13 / 14) * imaw2;
+      ima.height = (-45 / 224 * ratio + 269 / 224) * imaw2;
+      return displayIma();
+    } else if (ratio > 16 / 9) {
+      ima.height = 335 / 16 * 9;
+      ima.width = 335;
+      return displayIma();
+    } else if (ratio >= 9 / 16 && ratio < 1) {
+      ima.height = (-36 / 35 * ratio + 71 / 35) * imaw2;
+      ima.width = (12 / 35 * ratio + 127 / 140) * imaw2;
+      return displayIma();
+    } else if (ratio < 9 / 16) {
+      ima.width = imaw2 * 1.1;
+      ima.height = imaw2 * 1.45;
+      return displayIma();
+    }
+  };
+
+  slider1num = 0;
+
+  slider2num = 0;
+
+  slider1.on(Events.SliderValueChange, function() {
+    slider1num = slider1.value;
+    w = Math.round(slider1num * 100);
+    return changepic();
+  });
+
+  window.addEventListener("deviceorientation", function(event) {
+    alpha.rotation = Utils.round(event.alpha);
+    alphaValue.template = {
+      a: Utils.round(event.alpha)
+    };
+    return beta.y = Utils.modulate(event.beta, [-90, 90], [0, 80], true);
+  });
+
+}).call(this);
+})</script>
+
+	</head>
+	<body>
+	</body>
+</html>
