@@ -17,7 +17,7 @@ slider2 = new SliderComponent
 	x: Align.center
 	opacity: 0
 slider2.sendToBack()
-h = 100
+h = 12
 displayIma = ->
 	wid1.template =
 		w: Utils.round(ima.width)
