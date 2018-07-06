@@ -17,7 +17,7 @@ slider2 = new SliderComponent
 	x: Align.center
 	opacity: 0
 slider2.sendToBack()
-h = 12
+h = 100
 displayIma = ->
 	wid1.template =
 		w: Utils.round(ima.width)
@@ -42,33 +42,34 @@ changepic = ->
 # 	ball.midY = Utils.modulate(event.beta, [-90, 90], [0, container.height], true)
 # 	ball.midX = Utils.modulate(event.gamma, [-90, 90], [0, container.width], true)
 	if ratio >= 1 && ratio <= 2.5
-		ima.width = imaw2 * .6
-		ima.height = imaw2/w * h * .6 
+		ima.width = (2/15*ratio + 2/3)* imaw2
+		ima.height = ima.width * h/w
 		displayIma()
-	else if ratio > 2.5 && ratio <= 3
-		ima.width = imaw2 * .6
-		ima.height = imaw2/2 * .6
-		displayIma()
-	else if ratio > 3
+# 	else if ratio > 2.5 && ratio <= 3
+# 		ima.width = imaw2 * .6
+# 		ima.height = imaw2/2 * .6
+# 		displayIma()
+	else if ratio > 2.5
 # 		ima.height = imaw2/2.5 
-		ima.height = ima.width/2
+		ima.height = ima.width / 2.5
 # 			Utils.modulate(ratio,[3,10],[imaw2/2.5,imaw25/2.5],true)
-		ima.width = (1/28*ratio + 25/28)*imaw2 * .6
+		ima.width = (2/15*2.5 + 2/3)* imaw2
+# 			(1/28*ratio + 25/28)*imaw2 * .6
 # 			Utils.modulate(ratio,[3,10],[imaw2,imaw25],true)
 		displayIma()
 	else if ratio >= .4 && ratio < 1
-		ima.height = imaw2 * .6
-		ima.width = imaw2/h * w * .6
+		ima.height = (1/3*ratio + 7/15)* imaw2
+		ima.width = ima.height * w/h
 		displayIma()
-	else if ratio >= 1/3 && ratio <.4
+	else if ratio <.4
 		ima.height = imaw2 *.6
 		ima.width = imaw2/2 *.6
 		displayIma()
-	else if ratio < 1/3 
-		ima.width = ima.height/2
-# 			Utils.modulate(ratio,[1/3,1/10],[imaw2/2.5,imaw25/2.5],true)
-# 		ima.width = imaw2/2.5
-		ima.height = (-15/14*ratio + 19/14)*imaw2 *.5
+# 	else if ratio < 1/3 
+# 		ima.width = ima.height/2
+# # 			Utils.modulate(ratio,[1/3,1/10],[imaw2/2.5,imaw25/2.5],true)
+# # 		ima.width = imaw2/2.5
+# 		ima.height = (-15/14*ratio + 19/14)*imaw2 *.5
 # 			Utils.modulate(ratio,[1/3,1/10],[imaw2,imaw25],true)
 		displayIma()
 # 	if ratio >= 1 && ratio <= 16/9
