@@ -1,9 +1,5 @@
-{LottieLayer} = require 'LottieLayer'
 
-headerHeight = 67
-refreshThreshold = 140
-startpoint = 50
-endpoint = 140
+
 Framer.Defaults.Animation =
 # 	time: 0.3
 	curve: Spring(damping:1)
@@ -11,7 +7,9 @@ Framer.Defaults.Animation =
 # 	name: "customAnim"
 # 	path: "images/loading.json"
 
-PlayRing=->
+{LottieLayer} = require 'LottieLayer'
+
+PlayRing =->
 # 	Utils.delay 3,->
 		Me.animate
 	# 		scale: .5
@@ -33,7 +31,7 @@ customAnim = new LottieLayer
 	speed: 1
 	direction: 1
 	opacity: 0
-	
+
 
 like = new LottieLayer
 	name: "like"
@@ -44,6 +42,18 @@ like = new LottieLayer
 	loop: true
 	x: 12
 	width: 38
+	speed: 1
+	direction: 1
+
+likeBig = new LottieLayer
+	name: "likeBig"
+	path: "images/LikeAnimation.json"
+	autoplay: true
+	parent: X
+	y: 230
+	loop: true
+	x: Align.center
+	width: 120
 	speed: 1
 	direction: 1
 	
