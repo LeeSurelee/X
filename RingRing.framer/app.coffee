@@ -35,7 +35,7 @@ customAnim = new LottieLayer
 
 like = new LottieLayer
 	name: "like"
-	path: "images/LikeAnimation.json"
+	path: "images/LikeAnimation2.json"
 	autoplay: true
 	parent: X
 	y: 414
