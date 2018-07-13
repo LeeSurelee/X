@@ -35,11 +35,11 @@ customAnim = new LottieLayer
 
 like = new LottieLayer
 	name: "like"
-	path: "images/LikeAnimation2.json"
-	autoplay: true
+	path: "images/LikeAnimationSMALL.json"
+	autoplay: false
 	parent: X
 	y: 414
-	loop: true
+	loop: false
 	x: 12
 	width: 38
 	speed: 1
@@ -47,15 +47,31 @@ like = new LottieLayer
 
 likeBig = new LottieLayer
 	name: "likeBig"
-	path: "images/LikeAnimation.json"
-	autoplay: true
+	path: "images/LikeAnimationBIG4.json"
+	autoplay: false
 	parent: X
 	y: 230
-	loop: true
+	loop: false
 	x: Align.center
 	width: 120
 	speed: 1
 	direction: 1
+	opacity: 0
+
+state = 0
+LIKE.onClick ->
+	if state == 0
+		likeBig.opacity = 1
+		likeBig.play()
+		like.play()
+		Utils.delay 2, ->
+# 			like.goToAndStop(0)
+			likeBig.goToAndStop(0)
+			likeBig.opacity = 0
+		state = 1
+	else if state == 1
+		like.goToAndStop(0)
+		state = 0
 	
 	
 Utils.delay 1, ->
