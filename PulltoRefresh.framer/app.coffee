@@ -33,7 +33,7 @@ Restart.animate
 	options:
 		curve: Spring(damping:.8)
 		
-Utils.delay 2, ->
+Utils.delay 8, ->
 	Restart.animate
 		y: 667
 scroll_1.draggable.enabled = true
