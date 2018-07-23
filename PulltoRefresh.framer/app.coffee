@@ -10,7 +10,10 @@ Framer.Defaults.Animation =
 # customAnim = new LottieLayer
 # 	name: "customAnim"
 # 	path: "images/loading.json"
-	
+
+soundTab = new Audio("sounds/Tab1.m4a")
+soundRefresh = new Audio("sounds/Refresh.wav")
+
 customAnim = new LottieLayer
 	name: "customAnim"
 	path: "images/loading.json"
@@ -24,6 +27,15 @@ customAnim = new LottieLayer
 	direction: 1
 customAnim.sendToBack()
 
+
+Restart.animate
+	y: 542
+	options:
+		curve: Spring(damping:.8)
+		
+Utils.delay 2, ->
+	Restart.animate
+		y: 667
 scroll_1.draggable.enabled = true
 scroll_1.draggable.horizontal = false
 scroll_1.draggable.overdrag = false
@@ -43,6 +55,7 @@ scroll_1.draggable.onDragEnd ->
 		Utils.delay Utils.randomNumber(1,3), ->
 			scroll_1.animate
 				y: headerHeight
+			soundRefresh.play()
 			Utils.delay 1, ->
 				customAnim.goToAndStop(0)
 	else
@@ -56,6 +69,6 @@ scroll_1.on "change:y" ,->
 	customAnim.scale = Utils.modulate(distance, [startpoint, endpoint], [.6,1], true)
 	customAnim.y = Utils.modulate(distance, [startpoint, endpoint], [-50, 80], true)
 
-
+tabbar3.onClick ->
+	soundTab.play()
 	
-# customAnim.play()
