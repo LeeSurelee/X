@@ -5,7 +5,7 @@ Framer.Defaults.Animation =
 	curve: Bezier.easeInOut
  
 Adaptation = 0
-if Framer.Device.deviceType = "apple-iphone-x-silver"
+if Screen.height == 812
 	Adaptation = 812 - 667
 scroll = ScrollComponent.wrap(Elayer)
 scroll.height = 330
