@@ -3,15 +3,17 @@
 Framer.Defaults.Animation =
 	time: 0.3
 	curve: Bezier.easeInOut
-# 	
-
+ 
+Adaptation = 0
+if Framer.Device.deviceType = "apple-iphone-x-silver"
+	Adaptation = 812 - 667
 scroll = ScrollComponent.wrap(Elayer)
 scroll.height = 330
 scroll.scrollHorizontal = false
-scroll.y = 168
-Emotion.y = 42
+scroll.y = 168 + Adaptation
+Emotion.y = 42 
 scroll.contentInset = 
-	top: 64
+	top: 64 
 
 scroll.scrollY = -140
 # scroll.y = 63
@@ -29,10 +31,9 @@ scroll.onMove (event,layer) ->
 		bar.y = 5
 scroll.states.add
 	upper:
-		scrollY: 64
+		scrollY: 64 
 	lower:
 		scrollY: -71
-
 Upper = ->
 	scroll.stateCycle('upper')
 
