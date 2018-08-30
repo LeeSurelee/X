@@ -75,14 +75,17 @@ Emotion.onClick ->
 	Rest.opacity = 1
 
 Rest.onClick ->
-	cover.x += 32
+	if cover.x >= 14 && cover.x < 365
+		cover.x += 32
+# 		print cover.x
 	Wording.opacity = 0
 	Guide.opacity = 0
 	Rest.opacity = 1
 	
 Keyboard.onClick ->
-	cover.x -= 32
-	if cover.x == 14
+	if cover.x < 367 && cover.x > 14
+		cover.x -= 32
+	else if cover.x == 14
 		Wording.opacity = .6
 	
 	
