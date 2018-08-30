@@ -85,7 +85,8 @@ Rest.onClick ->
 Keyboard.onClick ->
 	if cover.x < 367 && cover.x > 14
 		cover.x -= 32
-	else if cover.x == 14
+# 		print cover.x
+	if cover.x == 14
 		Wording.opacity = .6
 	
 	
