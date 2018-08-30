@@ -4683,12 +4683,12 @@
                 "blur" : 12,
                 "blurEnabled" : 0,
                 "blurType" : "layer",
-                "bottom" : null,
+                "bottom" : 131,
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
-                "centerAnchorX" : 0.5013333333333333,
-                "centerAnchorY" : 0.5,
-                "constraintsLocked" : false,
+                "centerAnchorX" : 0.49333333333333335,
+                "centerAnchorY" : 0.39919354838709675,
+                "constraintsLocked" : true,
                 "contrast" : 100,
                 "contrastEnabled" : 0,
                 "editable" : false,
@@ -4784,6 +4784,123 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 164,
+                "widthFactor" : null
+              },
+              {
+                "__class" : "TextNode",
+                "autoSize" : true,
+                "blendingEnabled" : 0,
+                "blendingMode" : "normal",
+                "blur" : 12,
+                "blurEnabled" : 0,
+                "blurType" : "layer",
+                "bottom" : 104,
+                "brightness" : 100,
+                "brightnessEnabled" : 0,
+                "centerAnchorX" : 0.48666666666666669,
+                "centerAnchorY" : 0.54435483870967738,
+                "constraintsLocked" : true,
+                "contrast" : 100,
+                "contrastEnabled" : 0,
+                "editable" : false,
+                "exportOptions" : [
+
+                ],
+                "grayscale" : 0,
+                "grayScaleEnabled" : 0,
+                "height" : 18,
+                "heightFactor" : null,
+                "hueRotate" : 0,
+                "hueRotateEnabled" : 0,
+                "id" : "oXQkPruTG",
+                "invert" : 0,
+                "invertEnabled" : 0,
+                "left" : null,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 0.29999999999999999,
+                "parentid" : "Nr0hAFv2f",
+                "right" : null,
+                "rotation" : 0,
+                "saturate" : 100,
+                "saturateEnabled" : 0,
+                "sepia" : 0,
+                "sepiaEnabled" : 0,
+                "shadows" : [
+
+                ],
+                "styledText" : {
+                  "__class" : "StyledTextDraft",
+                  "blocks" : [
+                    {
+                      "data" : {
+                        "emptyStyle" : [
+                          "FONT:HelveticaNeue",
+                          "COLOR:rgb(0, 0, 0)",
+                          "LETTERSPACING:0",
+                          "LINEHEIGHT:1.2",
+                          "ALIGN:center",
+                          "SIZE:15"
+                        ]
+                      },
+                      "depth" : 0,
+                      "entityRanges" : [
+
+                      ],
+                      "inlineStyleRanges" : [
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "FONT:HelveticaNeue"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "COLOR:rgb(0, 0, 0)"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "LETTERSPACING:0"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "LINEHEIGHT:1.2"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "ALIGN:center"
+                        },
+                        {
+                          "length" : 6,
+                          "offset" : 0,
+                          "style" : "SIZE:15"
+                        }
+                      ],
+                      "key" : "98m1i",
+                      "text" : "单击删除表情",
+                      "type" : "unstyled"
+                    }
+                  ],
+                  "cached" : {
+                    "html" : "<span data-offset-key=\"98m1i-0-0\" style=\"tab-size:4;font-weight:400;font-family:&quot;HelveticaNeue&quot;, &quot;Helvetica Neue&quot;, sans-serif;-webkit-text-fill-color:rgb(0, 0, 0);font-size:15px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">单击删除表情<\/span><\/span>",
+                    "os" : "10_13",
+                    "size" : {
+                      "height" : 18,
+                      "width" : 91
+                    },
+                    "width" : 0
+                  },
+                  "entityMap" : {
+
+                  }
+                },
+                "targetName" : null,
+                "top" : null,
+                "visible" : true,
+                "width" : 91,
                 "widthFactor" : null
               }
             ],
