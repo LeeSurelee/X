@@ -19,6 +19,10 @@ videoScroll = ScrollComponent.wrap(video)
 videoScroll.parent = X
 videoScroll.borderRadius = 6
 
+
+ovalp.backgroundBlur = 10
+ovalp.opacity = 0
+
 distance = 0
 scroll.onMove ->
 # 	print scroll.scrollY
@@ -45,6 +49,12 @@ videoScroll.states.add
 		y: 667
 		width: Screen.width
 		borderRadius: 0
+	hover:
+		x: 375-160-16
+		y: 66
+		width: 160
+		height: 90
+		borderRadius: 4
 
 play.states.add
 	a:
@@ -140,7 +150,7 @@ dragDistance1 = 0
 dragDistance2 = 0
 videoScroll.onDragMove ->
 	dragDistance1 = videoScroll.y - 297 + 59
-# 	print dragDistance
+# 	print dragDistance1
 	BG.opacity = Utils.modulate(dragDistance1,[0,150],[1,0],true)
 videoScroll.onMove ->
 	dragDistance2 = videoScroll.y - 297 + 59
@@ -148,13 +158,15 @@ videoScroll.onMove ->
 	slider.opacity = Utils.modulate(dragDistance2,[0,19],[1,0],true)
 	closeV.y = Utils.modulate(dragDistance2,[0,50],[0,-50],true)
 	closeV.opacity = Utils.modulate(dragDistance2,[0,25],[1,0],true)
+	ovalp.opacity =  Utils.modulate(dragDistance2,[250,260],[0,1],true)
+	ovalp.y =  Utils.modulate(dragDistance2,[250,260],[597,587],true)
 
 # video.onDragStart ->
 videoScroll.onDragEnd ->
 	if dragDistance1 < 100
 		videoScroll.stateCycle('a')
 		BG.stateCycle('a')
-	else if dragDistance1 >= 100
+	else if dragDistance1 >= 100 && dragDistance1 < 260
 		newlayer()
 		BG.stateCycle('default')
 		videoScroll.stateCycle('out')
@@ -175,3 +187,5 @@ videoScroll.onDragEnd ->
 		Utils.delay .5,->
 			slider.stateCycle('default')
 			closeV.stateCycle('default')
+	else if dragDistance1 >= 260
+		videoScroll.stateCycle('hover')	
