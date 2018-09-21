@@ -6,7 +6,7 @@
   "contentScale" : 1,
   "fullScreen" : false,
   "cachedDeviceWidth" : 1440,
-  "deviceType" : "apple-macbook-air",
+  "deviceType" : "apple-macbook-pro",
   "sharedPrototype" : 0,
   "propertyPanelToggleStates" : {
 
@@ -14,7 +14,7 @@
   "projectId" : "61EF83C5-2D28-4600-9F26-DF92974C5C64",
   "deviceOrientation" : 0,
   "selectedHand" : "",
-  "showBezel" : 0,
+  "showBezel" : false,
   "foldedCodeRanges" : [
 
   ],

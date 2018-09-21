@@ -290,9 +290,7 @@
                         "top" : null,
                         "visible" : true,
                         "width" : 37,
-                        "widthFactor" : null,
-                        "x" : 103,
-                        "y" : 42
+                        "widthFactor" : null
                       }
                     ],
                     "clip" : false,
@@ -468,9 +466,7 @@
                     "top" : 85,
                     "visible" : true,
                     "width" : 65,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -587,9 +583,7 @@
                     "top" : 123,
                     "visible" : true,
                     "width" : 49,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -706,9 +700,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 65,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -825,9 +817,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 53,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -944,9 +934,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 49,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -1063,9 +1051,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 72,
-                    "y" : 20
+                    "widthFactor" : null
                   }
                 ],
                 "clip" : false,
@@ -1293,9 +1279,7 @@
                         "top" : null,
                         "visible" : true,
                         "width" : 37,
-                        "widthFactor" : null,
-                        "x" : 103,
-                        "y" : 42
+                        "widthFactor" : null
                       }
                     ],
                     "clip" : false,
@@ -1471,9 +1455,7 @@
                     "top" : 83,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -1590,9 +1572,7 @@
                     "top" : 121,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -1709,9 +1689,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -1828,9 +1806,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 49,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -1947,9 +1923,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 49,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -2066,9 +2040,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 72,
-                    "y" : 20
+                    "widthFactor" : null
                   }
                 ],
                 "clip" : false,
@@ -2296,9 +2268,7 @@
                         "top" : null,
                         "visible" : true,
                         "width" : 37,
-                        "widthFactor" : null,
-                        "x" : 103,
-                        "y" : 42
+                        "widthFactor" : null
                       }
                     ],
                     "clip" : false,
@@ -2474,9 +2444,7 @@
                     "top" : 87,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -2593,9 +2561,7 @@
                     "top" : 125,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -2712,9 +2678,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -2831,9 +2795,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -2950,9 +2912,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -3069,9 +3029,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 72,
-                    "y" : 20
+                    "widthFactor" : null
                   }
                 ],
                 "clip" : false,
@@ -3299,9 +3257,7 @@
                         "top" : null,
                         "visible" : true,
                         "width" : 37,
-                        "widthFactor" : null,
-                        "x" : 103,
-                        "y" : 42
+                        "widthFactor" : null
                       }
                     ],
                     "clip" : false,
@@ -3477,9 +3433,7 @@
                     "top" : 87,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -3596,9 +3550,7 @@
                     "top" : 125,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -3715,9 +3667,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -3834,9 +3784,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -3953,9 +3901,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4072,9 +4018,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 72,
-                    "y" : 20
+                    "widthFactor" : null
                   }
                 ],
                 "clip" : false,
@@ -4276,9 +4220,7 @@
                     "top" : 87,
                     "visible" : true,
                     "width" : 46,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4395,9 +4337,7 @@
                     "top" : 125,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4514,9 +4454,7 @@
                     "top" : 163,
                     "visible" : true,
                     "width" : 17,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4633,9 +4571,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 33,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4752,9 +4688,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 97,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "TextNode",
@@ -4871,9 +4805,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 49,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "FrameNode",
@@ -5016,9 +4948,7 @@
                         "top" : null,
                         "visible" : true,
                         "width" : 37,
-                        "widthFactor" : null,
-                        "x" : 103,
-                        "y" : 42
+                        "widthFactor" : null
                       }
                     ],
                     "clip" : false,
@@ -5194,9 +5124,7 @@
                     "top" : null,
                     "visible" : true,
                     "width" : 65,
-                    "widthFactor" : null,
-                    "x" : 95,
-                    "y" : 77
+                    "widthFactor" : null
                   },
                   {
                     "__class" : "FrameNode",
@@ -5468,7 +5396,6 @@
             "locked" : false,
             "name" : "bg",
             "opacity" : 1,
-            "originalFilename" : "",
             "parentid" : "JDCxEmdpU",
             "radius" : 0,
             "radiusBottomLeft" : 0,
@@ -5564,7 +5491,6 @@
             "locked" : false,
             "name" : "hover",
             "opacity" : 1,
-            "originalFilename" : "",
             "parentid" : "JDCxEmdpU",
             "radius" : 0,
             "radiusBottomLeft" : 0,
