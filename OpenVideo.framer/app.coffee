@@ -19,6 +19,9 @@ videoScroll = ScrollComponent.wrap(video)
 videoScroll.parent = X
 videoScroll.borderRadius = 6
 
+cover.onClick ->
+	
+cover.sendToBack()
 
 ovalp.backgroundBlur = 10
 ovalp.opacity = 0
@@ -146,6 +149,7 @@ closeV.on Events.Click, ->
 
 # video.onMouseDown (event,layer) ->
 # 	event.preventDefault()
+
 dragDistance1 = 0
 dragDistance2 = 0
 videoScroll.onDragMove ->
@@ -154,12 +158,18 @@ videoScroll.onDragMove ->
 	BG.opacity = Utils.modulate(dragDistance1,[0,150],[1,0],true)
 videoScroll.onMove ->
 	dragDistance2 = videoScroll.y - 297 + 59
+# 	print dragDistance2
 	slider.y = Utils.modulate(dragDistance2,[0,38],[Screen.height - slider.height - 5,667],true)
 	slider.opacity = Utils.modulate(dragDistance2,[0,19],[1,0],true)
 	closeV.y = Utils.modulate(dragDistance2,[0,50],[0,-50],true)
 	closeV.opacity = Utils.modulate(dragDistance2,[0,25],[1,0],true)
-	ovalp.opacity =  Utils.modulate(dragDistance2,[250,260],[0,1],true)
-	ovalp.y =  Utils.modulate(dragDistance2,[250,260],[597,587],true)
+	ovalp.opacity =  Utils.modulate(dragDistance2,[49,50],[0,1],true)
+videoScroll.onDrag ->
+	dragDistance3 = videoScroll.y - 297 + 59
+	if dragDistance3 > 0 && dragDistance2 < 250
+		ovalp.y =  Utils.modulate(dragDistance2,[50,100],[663,597],true)
+	else if dragDistance3 >= 250
+		ovalp.y =  Utils.modulate(dragDistance2,[251,255],[597,582],true)
 
 # video.onDragStart ->
 videoScroll.onDragEnd ->
@@ -187,5 +197,77 @@ videoScroll.onDragEnd ->
 		Utils.delay .5,->
 			slider.stateCycle('default')
 			closeV.stateCycle('default')
+		ovalp.animate
+			y: 663
+			opacity: 0
 	else if dragDistance1 >= 260
-		videoScroll.stateCycle('hover')	
+		videoScroll.stateCycle('hover')
+		ovalp.animate
+			y: 663
+			opacity: 0
+		isOpen = undefined
+		cover.bringToFront()
+		Utils.delay 0.5, ->
+			newvideo = videoScroll.copy()
+			newvideo.parent = X
+			newvideo.draggable = true
+			closehover.parent = newvideo
+			closehover.x = 130
+			closehover.y = 10
+			newvideo.onDragStart ->
+				newvideo.animate
+					shadowY: 2
+					shadowBlur: 10
+					shadowColor: "rgba(0,0,0,0.35)"
+			newvideo.onDragEnd ->
+					newvideo.animate
+						shadowY: 2
+						shadowBlur:40
+						shadowColor: "rgba(0,0,0,0)"
+					nx = newvideo.x
+					ny = newvideo.y
+					if nx >= 215
+						newvideo.animate
+							x: 199-4
+					if nx <= 16
+						newvideo.animate
+							x: 20
+					if ny >= 528
+						newvideo.animate
+							y: 528
+					if ny <= 66
+						newvideo.animate
+							y: 66
+					if nx < 108 && nx >16
+						newvideo.animate
+							x: 20
+					if nx > 108 && nx < 215
+						newvideo.animate
+							x: 199 -4
+			Utils.delay 0.1, ->
+				newlayer()
+				BG.stateCycle('default')
+	# 			videoScroll.stateCycle('out')
+				play.stateSwitch('default')
+				slider.stateCycle('default')
+				closeV.stateCycle('default')
+				Navi.placeBefore(videoScroll)
+				BG.sendToBack()
+				videoScroll.y = -distance + 186
+				videoScroll.x = 20
+				videoScroll.width = 333
+				videoScroll.height = 190
+				videoScroll.borderRadius = 6
+				layer.destroy()
+				videoScroll.draggable.enabled = false
+				videoScroll.draggable.horizontal = false
+				isOpen = false
+				slider.stateCycle('default')
+				closeV.stateCycle('default')
+			closehover.onClick ->
+				newvideo.animate
+					opacity: 0
+				Utils.delay 0.5,->
+					newvideo.destroy()
+					cover.sendToBack()
+				
