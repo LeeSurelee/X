@@ -16,9 +16,30 @@ video = new VideoLayer
 	width: Screen.width
 	height: Screen.width/64*36
 	video: "images/Fall.mp4"
+	opacity: 0
+
+Notice.states.add
+	Notice:
+		y: 8
+	
+h = 0
+w = 0
+a = 0
+Placeholder = new Layer
+	parent: home
+	width: 375
+	height: Screen.width * Utils.randomChoice([9/16,1,667/375])
+	y: Align.center
+	backgroundColor: Utils.randomColor()
+	opacity: .3
+	
+h = Placeholder.height
+w = Placeholder.width
+
+Placeholder.sendToBack()
 
 video.sendToBack()
-video.player.play()
+# video.player.play()
 
 Comments.parent = home
 Comments.bringToFront()
@@ -40,7 +61,9 @@ UpperAll =->
 	Like.animate
 		opacity: 0
 	video.stateCycle('Upper')
+	Placeholder.stateCycle('Upper')
 
+Count = 0
 CollapseAll =->
 	Comments.stateCycle('Collapse')
 	video.animate
@@ -56,6 +79,17 @@ CollapseAll =->
 			opacity: 1
 		Topic.animate
 			opacity: 1
+	Placeholder.animate
+		y: Screen.height/2 - h/2
+		width: w
+		height: h
+		x: Screen.width/2 - w/2
+	if Count < 2
+		Utils.delay 1,->
+			Notice.stateCycle('Notice')
+			Count += 1
+			Utils.delay 3,->
+				Notice.stateCycle('default')
 
 Scroll1 = new ScrollComponent
 	parent: Comments
@@ -73,6 +107,7 @@ distance1 = 0
 Scroll1.onMove ->
 	distance1 = Scroll1.scrollY
 # 	print distance1
+	Actions.opacity = Utils.modulate(distance1,[0,-40],[1,0],true)
 	if distance1 > 0 
 		Title1.y = distance1
 	if distance1 < 22
@@ -81,7 +116,13 @@ Scroll1.onScroll ->
 	if distance1 < 0 
 		video.y = -distance1
 		Actions.y = - distance1 + 172
-		Actions.opacity = Utils.modulate(distance1,[0,-40],[1,0],true)
+
+		if w/h <= 1
+			Placeholder.height = 210 - distance1
+			a = Placeholder.height
+# 			print a
+			Placeholder.width = a * w/h
+			Placeholder.x = Screen.width/2- a * w/h /2
 Scroll1.onScrollEnd ->
 	if distance1 < -50
 		CollapseAll()
@@ -90,6 +131,13 @@ Scroll1.onScrollEnd ->
 video.states.add
 	Upper:
 		y: 0
+
+Placeholder.states.add
+	Upper:
+		y: 0
+		height: 210
+		width: w * 210/h
+		x: Screen.width/2-w*210/h/2
 
 Like.onClick ->
 	UpperAll()
