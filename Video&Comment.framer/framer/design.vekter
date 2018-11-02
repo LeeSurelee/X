@@ -13055,8 +13055,8 @@
                 ],
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
-                "centerAnchorX" : 0,
-                "centerAnchorY" : 0,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.034108527131782945,
                 "children" : [
                   {
                     "__class" : "PathNode",
@@ -13266,7 +13266,7 @@
                   }
                 ],
                 "clip" : false,
-                "constraintsLocked" : false,
+                "constraintsLocked" : true,
                 "contrast" : 100,
                 "contrastEnabled" : 0,
                 "deviceType" : null,
@@ -13311,7 +13311,7 @@
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
-                "right" : null,
+                "right" : 0,
                 "rotation" : 0,
                 "saturate" : 100,
                 "saturateEnabled" : 0,
@@ -23061,8 +23061,8 @@
                 ],
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
-                "centerAnchorX" : 0,
-                "centerAnchorY" : 0,
+                "centerAnchorX" : 0.5,
+                "centerAnchorY" : 0.034108527131782945,
                 "children" : [
                   {
                     "__class" : "PathNode",
@@ -23637,7 +23637,7 @@
                   }
                 ],
                 "clip" : false,
-                "constraintsLocked" : false,
+                "constraintsLocked" : true,
                 "contrast" : 100,
                 "contrastEnabled" : 0,
                 "deviceType" : null,
@@ -23682,7 +23682,7 @@
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
-                "right" : null,
+                "right" : 0,
                 "rotation" : 0,
                 "saturate" : 100,
                 "saturateEnabled" : 0,

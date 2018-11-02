@@ -3,8 +3,9 @@ for layer in picholder
 	layer.image = Utils.randomImage()
 
 Framer.Defaults.Animation =
-	time: 0.3
-	curve: Bezier.easeInOut
+	time: 0.5
+# 	curve: Bezier.easeInOut
+	curve: Spring(damping: 1)
 
 ActionsCollapse.opacity = 0
 
@@ -12,13 +13,12 @@ video = new VideoLayer
 	parent: home
 	y: Align.center
 	x: Align.center
-	width: 375
-	height: 375/64*36
+	width: Screen.width
+	height: Screen.width/64*36
 	video: "images/Fall.mp4"
 
 video.sendToBack()
-
-# video.player.play()
+video.player.play()
 
 Comments.parent = home
 Comments.bringToFront()
@@ -46,7 +46,7 @@ CollapseAll =->
 	video.animate
 		y: Align.center
 	Actions.animate
-		y: 612
+		y: Screen.height - 17 - 38
 	Utils.delay .3,->
 		Actions.animate
 			opacity: 1
@@ -78,7 +78,7 @@ Scroll1.onMove ->
 	if distance1 < 22
 		BG1.y = -distance1 + 44
 Scroll1.onScroll ->
-	if distance1 < 0 && distance1 > -100
+	if distance1 < 0 
 		video.y = -distance1
 		Actions.y = - distance1 + 172
 		Actions.opacity = Utils.modulate(distance1,[0,-40],[1,0],true)
@@ -120,7 +120,10 @@ Scroll2 = new ScrollComponent
 	height: Screen.height - 210 - 44
 	backgroundColor: null
 	scrollHorizontal: false
-	
+
+Comment1.y += Screen.height - 667
+Comment2.y += Screen.height - 667
+
 Content2.parent = Scroll2.content
 Title2.parent = Scroll2.content
 Title2.bringToFront()
