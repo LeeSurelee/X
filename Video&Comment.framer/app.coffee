@@ -15,7 +15,7 @@ video = new VideoLayer
 	x: Align.center
 	width: Screen.width
 	height: Screen.width/64*36
-	video: "images/Fall.mp4"
+# 	video: "images/Fall.mp4"
 	opacity: 0
 
 Notice.states.add

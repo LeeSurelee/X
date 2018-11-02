@@ -22976,9 +22976,7 @@
                 "top" : null,
                 "visible" : true,
                 "width" : 193,
-                "widthFactor" : null,
-                "x" : 144,
-                "y" : 29
+                "widthFactor" : null
               }
             ],
             "clip" : false,
