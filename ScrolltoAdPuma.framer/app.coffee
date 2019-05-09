@@ -64,7 +64,7 @@ Scroll.content.on 'change:y',->
 		Scroll.onScrollEnd ->
 			if Scroll.direction == "down" && distance2 > (1125+140*addition)*ratio+50
 				addscroll.animate
-					y: 0 + 6*addition
+					y: 0
 				wrap2.animate
 					y: 0
 				wrap.animate
@@ -102,6 +102,7 @@ addscroll.mouseWheelEnabled = true
 # addscroll.content.y = 0
 # content2.y = 0
 # wrap2.height = addscroll.content.height
+
 
 adddis = 0
 adddis1 = 0
