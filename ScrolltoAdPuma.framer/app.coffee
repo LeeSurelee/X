@@ -2,6 +2,30 @@ Framer.Defaults.Animation =
 	time: 0.3
 	curve: Bezier.easeInOut
 
+# default_w = 375
+# default_h = 812
+# 
+# screen_width = Framer.Device.screen.width 
+# screen_height = Framer.Device.screen.height
+# Framer.Device.contentScale = ratio
+# 
+# 
+# ratio = screen_width / default_w
+
+# Framer.Device.customize
+# 	screenWidth: 414	
+# 	screenHeight: 896
+# block.height = 675 / 375 * content.width
+# content.height = content.width * 1794 / 375
+
+$1.width = 375
+$1.height = 812
+$1.clip = true
+$1.center()
+if Screen.height < 812
+	$1.scale = Screen.height / 812
+
+# print $1.superLayer
 
 rec = new Layer
 	parent: more
@@ -10,19 +34,30 @@ rec = new Layer
 	x: 0,y: -10
 	backgroundColor: '#F2F2F2'
 	
-
-	
-sh = Screen.height
-ratio = 812/sh
-bottom2.y = sh  *ratio + 730 *ratio
-bottom.y = 735/ratio
 plus = 0
 addition = 0
+	
+sh = Screen.height
+ratio1 = 812/sh
+
+sw = Screen.width
+ratio2 = 375/sw
+ratio = 1#ratio1
+# if Screen.width == 414 
+# 	plus = 76
+# 	addition = 1
+# 	ratio = 1#Math.max(ratio1,ratio2)
+	
+# else if Screen.height == 667 or sh == 640
+# 	ratio = 1#Math.min(ratio1,ratio2)
+# ratio = Math.max(ratio1,ratio2)
+# print ratio
+	
+bottom2.y = sh  *ratio + 730 *ratio
+# bottom.y = sh - bottom.height
+
 wrap.height = 1794*ratio
 
-if Screen.width == 414
-	plus = 76
-	addition = 1
 	
 content.height = 1794*ratio
 content.y = 0
@@ -48,10 +83,10 @@ Scroll.content.on 'change:y',->
 # 	print distance2
 	if distance <= 586 *ratio
 		subtitle.y = 675 *ratio - 9*addition
-		bottom.y = 735 /ratio
+# 		bottom.y = sh - bottom.height#735 /ratio
 	if distance > 586  *ratio&& distance < fixedstiky *ratio
 		subtitle.y = distance + 88 *ratio - 9*addition
-		bottom.y = 735 /ratio
+# 		bottom.y = sh - bottom.height#735 /ratio
 	else if distance >= fixedstiky *ratio
 		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
 # 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
