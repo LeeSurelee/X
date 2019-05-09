@@ -9,10 +9,19 @@ ratio = 812/sh
 bottom2.y = sh  *ratio + 730 *ratio
 bottom.y = 735/ratio
 plus = 0
+addition = 0
+
 
 if Screen.width == 414
 	plus = 76
+	addition = 1
+	
+content.height = 2761*ratio
+content.y = 0
+more.y = 2761*ratio 
+
 Scroll = ScrollComponent.wrap(wrap)
+
 Scroll.scrollHorizontal = false
 Scroll.parent = $1
 Scroll.placeBehind(bottom)
@@ -26,7 +35,6 @@ Scroll.content.on 'change:y',->
 	distance = Scroll.scrollY
 	distance2 = Scroll.scrollY
 # 	print distance2
-	
 	if distance <= 665 *ratio
 		subtitle.y = 753 *ratio
 		bottom.y = 735 /ratio
@@ -37,38 +45,38 @@ Scroll.content.on 'change:y',->
 		subtitle.y = 1040 *ratio + 88 *ratio
 		bottom.y = 735 /ratio + distance - 1040 *ratio
 		
-	if distance2 > 2002 + plus
-
-		before.opacity = Utils.modulate(distance2,[2125 - 123+ plus,2175- 123+ plus],[1,0],true)
-		after.opacity = Utils.modulate(distance2,[2125 - 123+ plus,2175 - 123+ plus],[0,1],true)
-		icon.rotation = Utils.modulate(distance2,[2125- 123+ plus,2175 - 123+ plus],[0,180],true)
-	if distance2 > (2175  - 123)*ratio
+	if distance2 > (2002+140*addition)*ratio
+		before.opacity = Utils.modulate(distance2,[(2002+140*addition)*ratio,(2002+140*addition)*ratio+50],[1,0],true)
+		after.opacity = Utils.modulate(distance2,[(2002+140*addition)*ratio,(2002+140*addition)*ratio+50],[0,1],true)
+		icon.rotation = Utils.modulate(distance2,[(2002+140*addition)*ratio,(2002+140*addition)*ratio+50],[0,180],true)
+	if distance2 > (2002+140*addition)*ratio+50
 		Scroll.onScrollEnd ->
-			if Scroll.direction == "down" && distance2 > 2175  - 123
+			if Scroll.direction == "down" && distance2 > (2002+140*addition)*ratio+50
 				addscroll.animate
-					y: 0
+					y: 0 + 6*addition
 				wrap2.animate
 					y: 0
 				wrap.animate
-					y: -2761
+					y: -2761*ratio
 				top_1.animate
 					opacity: 0
 				bottom2.animate	
-					y: 730
+					y: Screen.height - 77
 # 				print Scroll.direction
-				
-top_1.onTap ->
+
+back=()->
 	addscroll.animate	
 		y: sh
-	
 	wrap.animate
-		y: -2761 + sh - 44
+		y: -2761*ratio + sh - more.height
 	icon.animate
 		rotation: 0
 	top_1.animate
 		opacity: 1
 	bottom2.animate
-		y: sh+730
+		y: sh+Screen.height - 77
+top_1.onTap ->
+	back()
 
 addscroll = new ScrollComponent
 	width: Screen.width
@@ -94,17 +102,7 @@ addscroll.content.on 'change:y',->
 	icon2.rotation = Utils.modulate(adddis,[-35,-85],[0,180],true)
 	addscroll.onScrollEnd ->
 		if addscroll.direction == "up" && adddis < -60 
-			addscroll.animate	
-				y: sh
-			
-			wrap.animate
-				y: -2761 + sh - 44
-			icon.animate
-				rotation: 0
-			top_1.animate
-				opacity: 1
-			bottom2.animate
-				y: sh+730
+			back()
 # 	add.y = 0
 
 # addscroll = ScrollComponent.wrap(wrap2)
