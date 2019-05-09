@@ -116,7 +116,7 @@ addscroll.content.on 'change:y',->
 	else if adddis > 635 * ratio - 3*addition
 		subtitle2.y = adddis + top_1.height - 1 - 6*addition
 	before2.opacity = Utils.modulate(adddis,[-35,-65],[1,0],true)
-	after2.opacity = Utils.modulate(adddis,[-65,-85],[0,1],true)
+	after2.opacity = Utils.modulate(adddis,[-55,-85],[0,1],true)
 	icon2.rotation = Utils.modulate(adddis,[-35,-85],[0,180],true)
 	addscroll.onScrollEnd ->
 		if addscroll.direction == "up" && adddis < -60 

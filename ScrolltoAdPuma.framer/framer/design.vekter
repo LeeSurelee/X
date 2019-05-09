@@ -1231,7 +1231,16 @@
             "borderWidth" : 1,
             "bottom" : 0,
             "boxShadows" : [
-
+              {
+                "__class" : "BoxShadow",
+                "blur" : 0,
+                "color" : "#e6e6e6",
+                "enabled" : true,
+                "inset" : false,
+                "spread" : 0,
+                "x" : 0,
+                "y" : -0.5
+              }
             ],
             "brightness" : 100,
             "brightnessEnabled" : 0,
