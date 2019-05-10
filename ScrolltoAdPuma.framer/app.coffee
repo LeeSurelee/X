@@ -16,7 +16,7 @@ Framer.Defaults.Animation =
 # 	screenWidth: 414	
 # 	screenHeight: 896
 # block.height = 675 / 375 * content.width
-# content.height = content.width * (1794-28) / 375
+# content.height = content.width * (1794-29) / 375
 realheight = Screen.height
 $1.width = 375
 $1.height = 812
@@ -59,12 +59,12 @@ ratio = 1#ratio1
 bottom2.y = sh  *ratio + 730 *ratio
 # bottom.y = sh - bottom.height
 
-wrap.height = (1794-28)*ratio
+wrap.height = (1794-29)*ratio
 
 	
-content.height = (1794-28)*ratio
+content.height = (1794-29)*ratio
 content.y = 0
-more.y = (1794-28)*ratio + 10
+more.y = (1794-29)*ratio + 10
 
 
 Scroll = ScrollComponent.wrap(wrap)
@@ -107,7 +107,7 @@ Scroll.content.on 'change:y',->
 				wrap2.animate
 					y: 0
 				wrap.animate
-					y: -(1794-28)*ratio
+					y: -(1794-29)*ratio
 				top_1.animate
 					opacity: 0
 				bottom2.animate	
@@ -120,7 +120,7 @@ back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -(1794-28)*ratio + sh - bottom.height - more.height - 10
+		y: -(1794-29)*ratio + sh - bottom.height - more.height - 10
 	icon.animate
 		rotation: 0
 	top_1.animate

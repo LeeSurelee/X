@@ -163,7 +163,7 @@
                 ],
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
-                "centerAnchorX" : 0.5,
+                "centerAnchorX" : 0.49199999999999999,
                 "centerAnchorY" : 0.51011560693641622,
                 "children" : [
                   {
@@ -554,7 +554,7 @@
                 "intrinsicWidth" : null,
                 "invert" : 0,
                 "invertEnabled" : 0,
-                "left" : 3,
+                "left" : 0,
                 "locked" : false,
                 "name" : "content",
                 "opacity" : 1,
@@ -566,7 +566,7 @@
                 "radiusPerCorner" : false,
                 "radiusTopLeft" : 0,
                 "radiusTopRight" : 0,
-                "right" : 3,
+                "right" : 6,
                 "rotation" : 0,
                 "saturate" : 100,
                 "saturateEnabled" : 0,
