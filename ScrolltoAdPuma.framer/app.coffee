@@ -22,8 +22,8 @@ $1.width = 375
 $1.height = 812
 $1.clip = true
 $1.center()
-if Screen.height< 812
-	$1.scale = Screen.height/ 812
+# if Screen.height< 812
+$1.scale = Screen.height/ 812
 
 
 # print $1.superLayer
