@@ -17,13 +17,15 @@ Framer.Defaults.Animation =
 # 	screenHeight: 896
 # block.height = 675 / 375 * content.width
 # content.height = content.width * 1794 / 375
-
+realheight = Screen.height
 $1.width = 375
 $1.height = 812
 $1.clip = true
-$1.center()
-# if Screen.height< 812
 $1.scale = Screen.height/ 812
+$1.y = 
+$1.x = Align.center
+# if Screen.height< 812
+
 
 
 # print $1.superLayer
