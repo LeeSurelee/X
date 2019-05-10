@@ -5,8 +5,8 @@ Framer.Defaults.Animation =
 # default_w = 375
 # default_h = 812
 # 
-# screen_width = Framer.Device.screen.width 
-# screen_height = Framer.Device.screen.height
+# screen_width = Framer.Device.$1.width 
+# screen_height = Framer.Device.$1.height
 # Framer.Device.contentScale = ratio
 # 
 # 
@@ -22,14 +22,15 @@ $1.width = 375
 $1.height = 812
 $1.clip = true
 $1.center()
-if Screen.height < 812
-	$1.scale = Screen.height / 812
+if Screen.height< 812
+	$1.scale = Screen.height/ 812
+
 
 # print $1.superLayer
 
 rec = new Layer
 	parent: more
-	width: Screen.width
+	width: $1.width
 	height: 10
 	x: 0,y: -10
 	backgroundColor: '#F2F2F2'
@@ -37,18 +38,18 @@ rec = new Layer
 plus = 0
 addition = 0
 	
-sh = Screen.height
+sh = $1.height
 ratio1 = 812/sh
 
-sw = Screen.width
+sw = $1.width
 ratio2 = 375/sw
 ratio = 1#ratio1
-# if Screen.width == 414 
+# if $1.width == 414 
 # 	plus = 76
 # 	addition = 1
 # 	ratio = 1#Math.max(ratio1,ratio2)
 	
-# else if Screen.height == 667 or sh == 640
+# else if $1.height== 667 or sh == 640
 # 	ratio = 1#Math.min(ratio1,ratio2)
 # ratio = Math.max(ratio1,ratio2)
 # print ratio
@@ -65,8 +66,9 @@ more.y = 1794*ratio + 10
 
 
 Scroll = ScrollComponent.wrap(wrap)
-Scroll.height = Screen.height - bottom.height
+# Scroll.height = $1.height- bottom.height
 Scroll.y = 0 + 9*addition
+Scroll.height = $1.height - bottom.height
 Scroll.scrollHorizontal = false
 Scroll.parent = $1
 Scroll.placeBehind(bottom)
@@ -107,31 +109,35 @@ Scroll.content.on 'change:y',->
 				top_1.animate
 					opacity: 0
 				bottom2.animate	
-					y: Screen.height - 77
+					y: $1.height - 77
+				bottom.animate
+					y: -bottom.height
 # 				print Scroll.direction
 
 back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -1794*ratio + sh - more.height - bottom.height - 10
+		y: -1794*ratio + sh - bottom.height - more.height - 10
 	icon.animate
 		rotation: 0
 	top_1.animate
 		opacity: 1
 	bottom2.animate
-		y: sh+Screen.height - 77
+		y: sh+$1.height- 77
+	bottom.animate
+		y: sh - bottom.height
 top_1.onTap ->
 	back()
 
 addscroll = new ScrollComponent
-	width: Screen.width
-	height: sh - bottom.height
+	width: $1.width
+	height: $1.height-bottom2.height
 	y: sh
 addscroll.scrollHorizontal = false
 wrap2.parent = addscroll.content
 addscroll.parent = $1
-addscroll.placeBehind(top2)
+addscroll.placeBehind(bottom)
 addscroll.mouseWheelEnabled = true
 # addscroll.content.height = 2994*ratio
 # addscroll.content.y = 0
