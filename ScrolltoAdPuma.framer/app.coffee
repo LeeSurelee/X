@@ -16,7 +16,7 @@ Framer.Defaults.Animation =
 # 	screenWidth: 414	
 # 	screenHeight: 896
 # block.height = 675 / 375 * content.width
-# content.height = content.width * 1794 / 375
+# content.height = content.width * (1794-28) / 375
 realheight = Screen.height
 $1.width = 375
 $1.height = 812
@@ -59,12 +59,12 @@ ratio = 1#ratio1
 bottom2.y = sh  *ratio + 730 *ratio
 # bottom.y = sh - bottom.height
 
-wrap.height = 1794*ratio
+wrap.height = (1794-28)*ratio
 
 	
-content.height = 1794*ratio
+content.height = (1794-28)*ratio
 content.y = 0
-more.y = 1794*ratio + 10
+more.y = (1794-28)*ratio + 10
 
 
 Scroll = ScrollComponent.wrap(wrap)
@@ -95,19 +95,19 @@ Scroll.content.on 'change:y',->
 		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
 # 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
 		
-	if distance2 > (1125+140*addition)*ratio
-		before.opacity = Utils.modulate(distance2,[(1125+140*addition)*ratio,(1125+140*addition)*ratio+30],[1,0],true)
-		after.opacity = Utils.modulate(distance2,[(1125+140*addition)*ratio+20,(1125+140*addition)*ratio+50],[0,1],true)
-		icon.rotation = Utils.modulate(distance2,[(1125+140*addition)*ratio,(1125+140*addition)*ratio+50],[0,180],true)
-	if distance2 > (1125+140*addition)*ratio+50
+	if distance2 > (1097+140*addition)*ratio
+		before.opacity = Utils.modulate(distance2,[(1097+140*addition)*ratio,(1097+140*addition)*ratio+30],[1,0],true)
+		after.opacity = Utils.modulate(distance2,[(1097+140*addition)*ratio+20,(1097+140*addition)*ratio+50],[0,1],true)
+		icon.rotation = Utils.modulate(distance2,[(1097+140*addition)*ratio,(1097+140*addition)*ratio+50],[0,180],true)
+	if distance2 > (1097+140*addition)*ratio+50
 		Scroll.onScrollEnd ->
-			if Scroll.direction == "down" && distance2 > (1125+140*addition)*ratio+50
+			if Scroll.direction == "down" && distance2 > (1097+140*addition)*ratio+50
 				addscroll.animate
 					y: 0
 				wrap2.animate
 					y: 0
 				wrap.animate
-					y: -1794*ratio
+					y: -(1794-28)*ratio
 				top_1.animate
 					opacity: 0
 				bottom2.animate	
@@ -120,7 +120,7 @@ back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -1794*ratio + sh - bottom.height - more.height - 10
+		y: -(1794-28)*ratio + sh - bottom.height - more.height - 10
 	icon.animate
 		rotation: 0
 	top_1.animate
