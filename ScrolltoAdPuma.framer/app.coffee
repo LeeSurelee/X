@@ -129,6 +129,8 @@ back=()->
 		y: sh+$1.height- 77
 	bottom.animate
 		y: sh - bottom.height
+	before.animate
+		opacity: 1
 top_1.onTap ->
 	back()
 
