@@ -2,21 +2,18 @@ Framer.Defaults.Animation =
 	time: 0.3
 	curve: Bezier.easeInOut
 
-# default_w = 375
-# default_h = 812
-# 
-# screen_width = Framer.Device.$1.width 
-# screen_height = Framer.Device.$1.height
-# Framer.Device.contentScale = ratio
-# 
-# 
-# ratio = screen_width / default_w
+flow = new FlowComponent
 
-# Framer.Device.customize
-# 	screenWidth: 414	
-# 	screenHeight: 896
-# block.height = 675 / 375 * content.width
-# content.height = content.width * (1794-29) / 375
+flow.showNext($1)
+
+ad.onClick ->
+	flow.showNext($2)
+	
+	
+$2.onClick ->
+	flow.showPrevious()
+	
+
 realheight = Screen.height
 $1.width = 375
 $1.height = 812
