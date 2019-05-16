@@ -1,6 +1,6 @@
 Framer.Defaults.Animation =
 	time: 0.3
-	curve: "Spring(damping:1)"
+	curve: Bezier.easeInOut
 
 
 realheight = Screen.height
@@ -91,7 +91,6 @@ Scroll.content.on 'change:y',->
 		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
 # 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
 	if distance2 > 500
-
 		Scroll.onScrollEnd ->
 			if Scroll.direction == "down" && distance2 > 500
 				nextpage()
