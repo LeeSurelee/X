@@ -13,8 +13,16 @@ ad.onClick ->
 $2.onClick ->
 	flow.showPrevious()
 	
+flow.draggable.enabled = false
+flow.width = 375
+flow.height = 812
+# flow.clip = true
+# flow.scale = Screen.height/ 812
+flow.y = 
+flow.x = Align.center
 
 realheight = Screen.height
+
 $1.width = 375
 $1.height = 812
 $1.clip = true
@@ -23,7 +31,12 @@ $1.y =
 $1.x = Align.center
 # if Screen.height< 812
 
-
+$2.width = 375
+$2.height = 812
+$2.clip = true
+$2.scale = Screen.height/ 812
+$2.y = 
+$2.x = Align.center
 
 # print $1.superLayer
 
