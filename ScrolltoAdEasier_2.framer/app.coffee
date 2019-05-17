@@ -38,10 +38,10 @@ ratio = 1#ratio1
 bottom2.y = sh  *ratio + 730 *ratio
 # bottom.y = sh - bottom.height
 
-wrap.height = 1236
+wrap.height = 4646
 
 	
-content.height = 1236
+content.height = 4646
 content.y = 0
 
 wrap.clip = true
@@ -54,6 +54,7 @@ Scroll.scrollHorizontal = false
 Scroll.parent = $1
 Scroll.placeBehind(bottom)
 
+# Scroll.content.draggable.momentum = no
 # Scroll.mouseWheelEnabled = true
 distance = 0
 distance2 = 0
@@ -61,12 +62,8 @@ state = 1
 totheend = 0
 
 nextpage =() ->
-	wrap.animate
-		y: -1236
-	addscroll.animate
-		y: 0	
-	wrap2.animate
-		y: 0
+	Scroll.animate
+		scrollY: 1200
 	top_1.animate
 		opacity: 0
 	bottom2.animate	
@@ -79,7 +76,7 @@ fixedstiky = 1040 + 60
 Scroll.content.on 'change:y',->
 	distance = Scroll.scrollY
 	distance2 = Scroll.scrollY
-# 	print distance2
+	print distance2
 # 	print totheend
 	if distance <= 586 *ratio
 		subtitle.y = 675 *ratio - 9*addition
@@ -87,14 +84,14 @@ Scroll.content.on 'change:y',->
 	if distance > 586  *ratio&& distance < fixedstiky *ratio
 		subtitle.y = distance + 88 *ratio - 9*addition
 # 		bottom.y = sh - bottom.height#735 /ratio
-	else if distance >= fixedstiky *ratio
-		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
-# 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
-	if distance2 > 500
-		Scroll.onScrollEnd ->
-			if Scroll.direction == "down" && distance2 > 500
-				nextpage()
-	if distance2 == 501
+# 	else if distance >= fixedstiky *ratio
+# 		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
+# # 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
+# 	if distance2 > 500
+# 		Scroll.onScrollEnd ->
+# 			if Scroll.direction == "down" && distance2 > 500
+# 				nextpage()
+	if distance2 > 501
 		totheend = 1
 
 	if totheend == 1
@@ -105,7 +102,7 @@ back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -1236 + sh - bottom.height + 1
+		y: -4646 + sh - bottom.height + 1
 	top_1.animate
 		opacity: 1
 	bottom2.animate
@@ -115,42 +112,3 @@ back=()->
 	totheend = 0
 top_1.onTap ->
 	back()
-
-addscroll = new ScrollComponent
-	width: $1.width
-	height: $1.height-bottom2.height
-	y: sh
-addscroll.scrollHorizontal = false
-wrap2.parent = addscroll.content
-addscroll.parent = $1
-addscroll.placeBehind(bottom)
-addscroll.mouseWheelEnabled = true
-# addscroll.content.height = 2994*ratio
-# addscroll.content.y = 0
-# content2.y = 0
-# wrap2.height = addscroll.content.height
-
-
-adddis = 0
-adddis1 = 0
-subtitle2.y = 723
-addscroll.content.on 'change:y',->
-	adddis = addscroll.scrollY
-	adddis2 = addscroll.scrollY
-# 	print adddis
-# 	bottom2.y = 730 + adddis
-	if adddis <= 635 *ratio - 3*addition
-		subtitle2.y = 723*ratio - 6*addition
-	else if adddis > 635 * ratio - 3*addition
-		subtitle2.y = adddis + top_1.height - 1 - 6*addition
-	before2.opacity = Utils.modulate(adddis,[-35,-65],[1,0],true)
-	after2.opacity = Utils.modulate(adddis,[-55,-85],[0,1],true)
-	icon2.rotation = Utils.modulate(adddis,[-35,-85],[0,180],true)
-	addscroll.onScrollEnd ->
-		if addscroll.direction == "up" && adddis < -60 
-			back()
-# 	add.y = 0
-
-# addscroll = ScrollComponent.wrap(wrap2)
-# addscroll.scrollHorizontal = false
-# addscroll.mouseWheelEnabled = true
