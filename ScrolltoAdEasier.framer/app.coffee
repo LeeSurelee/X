@@ -30,7 +30,7 @@ ratio = 1#ratio1
 # 	addition = 1
 # 	ratio = 1#Math.max(ratio1,ratio2)
 	
-# else if $1.height== 667 or sh == 640
+# else if $1.height== 667 or sh == 640	
 # 	ratio = 1#Math.min(ratio1,ratio2)
 # ratio = Math.max(ratio1,ratio2)
 # print ratio

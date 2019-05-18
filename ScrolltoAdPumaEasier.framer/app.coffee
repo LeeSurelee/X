@@ -58,7 +58,7 @@ wrap.clip = true
 	
 content.height = 1236
 content.y = 0
-# more.y = (1794-29)*ratio
+more.y += 530
 after.opacity = 0
 
 
