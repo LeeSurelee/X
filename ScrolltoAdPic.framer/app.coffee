@@ -51,10 +51,10 @@ sw = $1.width
 ratio2 = 375/sw
 ratio = 1#ratio1
 
-wrap.height = 2777
+wrap.height = 5004
 
 	
-content.height = 2777
+content.height = 5004
 content.y = 0
 
 
