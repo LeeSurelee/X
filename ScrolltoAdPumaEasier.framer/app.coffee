@@ -52,13 +52,13 @@ ratio = 1#ratio1
 bottom2.y = sh  *ratio + 730 *ratio
 # bottom.y = sh - bottom.height
 
-wrap.height = 1236
+wrap.height = 1485
 wrap.clip = true
 
 	
-content.height = 1236
+content.height = 1485
 content.y = 0
-more.y += 530
+more.y += 530-249
 after.opacity = 0
 
 
@@ -75,7 +75,7 @@ distance = 0
 distance2 = 0
 state = 1
 
-dis1 = 501
+dis1 = 501+249
 dis2 = dis1 + 10
 fixedstiky = 1040 + 60
 Scroll.content.on 'change:y',->
@@ -96,9 +96,9 @@ Scroll.content.on 'change:y',->
 		before.opacity = Utils.modulate(distance2,[dis1,dis2],[1,0],true)
 		after.opacity = Utils.modulate(distance2,[dis1+5,dis2+5],[0,1],true)
 		icon.rotation = Utils.modulate(distance2,[dis1,dis2+5],[0,180],true)
-	if distance2 > dis1-5
+	if distance2 > dis1+5
 		Scroll.onScrollEnd ->
-			if Scroll.direction == "down" && distance2 > dis1-20
+			if Scroll.direction == "down" && distance2 > dis1+5
 				addscroll.animate
 					y: 0
 				wrap2.animate
@@ -117,7 +117,7 @@ back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -501
+		y: -750
 	icon.animate
 		rotation: 0
 	top_1.animate

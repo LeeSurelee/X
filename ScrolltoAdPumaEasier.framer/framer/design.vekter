@@ -131,14 +131,14 @@
             "borderStyle" : "solid",
             "borderTop" : 1,
             "borderWidth" : 1,
-            "bottom" : -424,
+            "bottom" : -673,
             "boxShadows" : [
 
             ],
             "brightness" : 100,
             "brightnessEnabled" : 0,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.76108374384236455,
+            "centerAnchorY" : 0.91440886699507384,
             "children" : [
               {
                 "__class" : "FrameNode",
@@ -164,7 +164,7 @@
                 "brightness" : 100,
                 "brightnessEnabled" : 0,
                 "centerAnchorX" : 0.49199999999999999,
-                "centerAnchorY" : 0.7139967637540453,
+                "centerAnchorY" : 0.59307795698924726,
                 "children" : [
                   {
                     "__class" : "FrameNode",
@@ -278,7 +278,93 @@
                     "centerAnchorX" : 0.50948509485094851,
                     "centerAnchorY" : 0.524929178470255,
                     "children" : [
+                      {
+                        "__class" : "FrameNode",
+                        "aspectRatioLocked" : true,
+                        "blendingEnabled" : 0,
+                        "blendingMode" : "normal",
+                        "blur" : 12,
+                        "blurEnabled" : 0,
+                        "blurType" : "layer",
+                        "borderBottom" : 1,
+                        "borderColor" : "#222",
+                        "borderEnabled" : 0,
+                        "borderLeft" : 1,
+                        "borderPerSide" : false,
+                        "borderRight" : 1,
+                        "borderStyle" : "solid",
+                        "borderTop" : 1,
+                        "borderWidth" : 1,
+                        "bottom" : 329,
+                        "boxShadows" : [
 
+                        ],
+                        "brightness" : 100,
+                        "brightnessEnabled" : 0,
+                        "centerAnchorX" : 0.49867021276595747,
+                        "centerAnchorY" : 0.59033989266547404,
+                        "children" : [
+
+                        ],
+                        "clip" : false,
+                        "constraintsLocked" : false,
+                        "contrast" : 100,
+                        "contrastEnabled" : 0,
+                        "deviceType" : null,
+                        "exportIncludesBackground" : true,
+                        "exportOptions" : [
+
+                        ],
+                        "fillColor" : "rgba(255,255,255,1)",
+                        "fillEnabled" : true,
+                        "fillGradient" : {
+                          "__class" : "LinearGradient",
+                          "alpha" : 1,
+                          "angle" : 0,
+                          "end" : "rgba(0,0,0,0)",
+                          "start" : "black"
+                        },
+                        "fillImage" : "Vjq8YWgjVAWakhnc2Cbh3NPti6AJPgmq6vLlpkupkDhwyriBZF9E5chMIQDESolN8ebnr0dUWXrARuyWxQ.png",
+                        "fillImagePixelHeight" : 1431,
+                        "fillImagePixelWidth" : 750,
+                        "fillImageResize" : "fill",
+                        "fillType" : "image",
+                        "grayscale" : 0,
+                        "grayScaleEnabled" : 0,
+                        "height" : 716,
+                        "heightFactor" : null,
+                        "hueRotate" : 0,
+                        "hueRotateEnabled" : 0,
+                        "id" : "GPfh4kx95",
+                        "intrinsicHeight" : 1431,
+                        "intrinsicWidth" : 750,
+                        "invert" : 0,
+                        "invertEnabled" : 0,
+                        "left" : 0,
+                        "locked" : false,
+                        "name" : null,
+                        "opacity" : 1,
+                        "originalFilename" : "Group.png",
+                        "parentid" : "UK2Hh4oW1",
+                        "radius" : 0,
+                        "radiusBottomLeft" : 0,
+                        "radiusBottomRight" : 0,
+                        "radiusIsRelative" : false,
+                        "radiusPerCorner" : false,
+                        "radiusTopLeft" : 0,
+                        "radiusTopRight" : 0,
+                        "right" : 1,
+                        "rotation" : 0,
+                        "saturate" : 100,
+                        "saturateEnabled" : 0,
+                        "sepia" : 0,
+                        "sepiaEnabled" : 0,
+                        "targetName" : null,
+                        "top" : null,
+                        "visible" : true,
+                        "width" : 375,
+                        "widthFactor" : null
+                      }
                     ],
                     "clip" : false,
                     "constraintsLocked" : true,
@@ -316,7 +402,7 @@
                     "invertEnabled" : 0,
                     "left" : 0,
                     "locked" : false,
-                    "name" : null,
+                    "name" : "bg",
                     "opacity" : 1,
                     "parentid" : "mtJjox8Gc",
                     "radius" : 0,
@@ -387,7 +473,7 @@
                     "visible" : true,
                     "width" : 375,
                     "x" : 0,
-                    "y" : 1186
+                    "y" : 1435
                   },
                   {
                     "__class" : "FrameNode",
@@ -406,14 +492,14 @@
                     "borderStyle" : "solid",
                     "borderTop" : 1,
                     "borderWidth" : 1,
-                    "bottom" : 534,
+                    "bottom" : 285,
                     "boxShadows" : [
 
                     ],
                     "brightness" : 100,
                     "brightnessEnabled" : 0,
                     "centerAnchorX" : 0.50813008130081305,
-                    "centerAnchorY" : 0.68611898016997164,
+                    "centerAnchorY" : 0.82719546742209626,
                     "children" : [
                       {
                         "__class" : "FrameNode",
@@ -1387,7 +1473,7 @@
             "fillType" : "color",
             "grayscale" : 0,
             "grayScaleEnabled" : 0,
-            "height" : 1236,
+            "height" : 1485,
             "heightFactor" : null,
             "hueRotate" : 0,
             "hueRotateEnabled" : 0,
