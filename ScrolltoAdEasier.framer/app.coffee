@@ -38,10 +38,10 @@ ratio = 1#ratio1
 bottom2.y = sh  *ratio + 730 *ratio
 # bottom.y = sh - bottom.height
 
-wrap.height = 1236
+wrap.height = 1485
 
 	
-content.height = 1236
+content.height = 1485
 content.y = 0
 
 wrap.clip = true
@@ -62,7 +62,7 @@ totheend = 0
 
 nextpage =() ->
 	wrap.animate
-		y: -1236
+		y: -1485
 	addscroll.animate
 		y: 0	
 	wrap2.animate
@@ -90,12 +90,12 @@ Scroll.content.on 'change:y',->
 	else if distance >= fixedstiky *ratio
 		subtitle.y = fixedstiky *ratio + 88 *ratio- 9*addition
 # 		bottom.y = 735 /ratio + distance - fixedstiky *ratio
-	if distance2 > 500
+	if distance2 > 500+249
 
 		Scroll.onScrollEnd ->
-			if Scroll.direction == "down" && distance2 > 500
+			if Scroll.direction == "down" && distance2 > 500+249
 				nextpage()
-	if distance2 == 501
+	if distance2 == 501+249
 		totheend = 1
 
 	if totheend == 1
@@ -106,7 +106,7 @@ back=()->
 	addscroll.animate	
 		y: sh
 	wrap.animate
-		y: -1236 + sh - bottom.height + 1
+		y: -1485 + sh - bottom.height + 1
 	top_1.animate
 		opacity: 1
 	bottom2.animate
