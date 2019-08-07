@@ -9,7 +9,8 @@ content.on "change:y" ,->
 	distance = content.y - 297
 # 	print distance
 	bg.opacity = Utils.modulate(distance,[0,400],[1,0],true)
-	
+
+button.y = Screen.height
 content.onDragEnd ->
 	if distance < 100
 
@@ -25,3 +26,11 @@ content.onDragEnd ->
 				y: 297
 			bg.animate
 				opacity: 1
+show =->
+	Utils.delay 0.6, ->
+		button.animate
+			y: Screen.height - 87
+show()
+refresh.onClick ->
+	button.y = Screen.height
+	show()
